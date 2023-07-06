@@ -9,7 +9,7 @@ let turns_passed = 0;
 // numbers of combination's to win.
 const winner = ["123", "456", "789", "159", "357", "369", "258", "147"];
 
-function startGame(a) {
+function startGame(event) {
   // check if the squre(div) is empty.
   if (event.target.innerText == "") {
     // turn x.
@@ -17,7 +17,7 @@ function startGame(a) {
     if (turn_x == true) {
       //  if the squre is empty print "x".
       event.target.innerText = "x";
-      // a is the squre(div) that we pick 1-9,
+      // event is the squre(div) that we pick 1-9,
       // toString() convert the number to string and added to the variable str (let x_picked_squre_choice ="").
       x_picked_squre_choice += a.toString();
       // counting how many moves we did in the game for knowing when to stop and check a win.
@@ -33,7 +33,7 @@ function startGame(a) {
       // if the squre is empty print "o".
     } else {
       event.target.innerText = "o";
-      // a is the squre(div) that we pick 1-9,
+      // event is the squre(div) that we pick 1-9,
       // toString() convert the number to string and added to the variable str (let o_picked_squre_choice ="").
       o_picked_squre_choice += a.toString();
       // counting how many moves we did in the game for knowing when to stop and check a win.
